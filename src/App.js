@@ -1,24 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ImageCard from "./components/ImageCard";
+import Nav from "./components/Nav";
+import Wrapper from "./components/Wrapper";
+import Title from "./components/Title";
+import cards from  "./images.json";
+// import logo from './logo.svg';
+// import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Nav></Nav>
+      <Wrapper>
+        <Title>
+          <div className="text-center">
+            <h1 id = "message-title"> </h1>
+          </div>
+          <div className ="gameScore text-center">
+<p>Score</p>
+          </div>
+
+        </Title>
+      </Wrapper>
+      
     </div>
   );
 }
