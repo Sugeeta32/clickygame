@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-function FriendCard(props){
+function ImageCard(props){
     return(
         <div className ="card">
 <div className="img-container" key={props.id} onClick ={() => props.handleClick(props.id, props.clicked)}>
@@ -15,4 +15,4 @@ alt ={props.name}
     );
 }
 
-export default FriendCard;
+export default ImageCard;

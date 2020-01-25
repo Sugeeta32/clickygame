@@ -4,6 +4,7 @@ import Nav from "./components/Nav";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import images from "./images.json";
+//import { render } from '@testing-library/react';
 
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
     images,
     score: 0,
     topScore: 0,
-    message: "Click on..."
+    message: "Click on a  character.."
 
 
   })
@@ -24,52 +25,61 @@ function App() {
         imageOrder[index].clicked = false;
       });
       return setName({
-       image: imageOrder.sort(()=>Math.random()-0.5),
-       message:"wrong",
-       score:0
+        image: imageOrder.sort(() => Math.random() - 0.5),
+        message: "wrong",
+        score: 0
 
       })
 
     } else {
       imageOrder.forEach((image, index) => {
-        if(id === image.id){
-          imageOrder[index].clicked =true;
+        if (id === image.id) {
+          imageOrder[index].clicked = true;
         }
 
       });
+      const { topScore, score } = name;
+      const newScore = score + 1;
+      const newTopScore = newScore > topScore ? newScore : topScore;
 
-
+      return setName({
+        image: imageOrder.sort(() => Math.random() - 0.5),
+        message: "Going Good",
+        score: newScore,
+        topScore: newTopScore
+      })
 
     }
+  };
 
+ 
+    return (
+      <div>
+        <Nav></Nav>
+        <Wrapper>
+          <Title>
+            <div className="text-center">
+              <h1 id="message-title">{name.message} </h1>
+            </div>
+            <div className="gameScores text-center">
+              <p>Score {name.score} | Top Score{name.topScore}</p>
+            </div>
 
-  }
+          </Title>
+          {name.images.map(image => (
+            <ImageCard
+              id={image.id}
+              key={image.id}
+              name={image.name}
+              image={image.image}
+              clicked={image.clicked}
+              handleClick={handleClick} />
+          ))}
+        </Wrapper>
 
-  return (
-    <div>
-      <Nav></Nav>
-      <Wrapper>
-        <Title>
-          <div className="text-center">
-            <h1 id="message-title">{name.message} </h1>
-          </div>
-          <div className="gameScore text-center">
-            <p>Score :{name.score} | Top Score:{name.topScore}</p>
-          </div>
-
-        </Title>
-        {name.images.map(images=>(
-          <ImageCard
-          id = {images.id}
-          key ={images.id}
-          image ={images.image}
-          clicked={images.clicked}
-          handleClick={handleClick}/>
-        ))}
-      </Wrapper>
-
-    </div>
-  );
+      </div>
+    );
+  
 }
 
 export default App;
