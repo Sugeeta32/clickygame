@@ -10,76 +10,85 @@ import images from "./images.json";
 function App() {
   const [name, setName] = useState({
     images,
+    clickedImages: [],
     score: 0,
-    topScore: 0,
-    message: "Click on a  character.."
+    // topScore: 0,
+    // message: "Click on a  character.."
+  });
 
 
-  })
-  function handleClick(id, clicked) {
-    const imageOrder = name.images;
-
-
-    if (clicked) {
-      imageOrder.forEach((image, index) => {
-        imageOrder[index].clicked = false;
-      });
-      return setName({
-        image: imageOrder.sort(() => Math.random() - 0.5),
-        message: "wrong",
+  function handleClick(event) {
+    //console.log("working");
+    //alert("working");
+    const allImages = event.target.alt;
+    const imagesAlreadyClicked = name.clickedImages.indexOf(allImages) > -1;
+    //console.log( name.clickedImages);
+    //console.log(name.id);
+    if (imagesAlreadyClicked) {
+      setName({
+        images: name.images.sort(function (a, b) {
+          return 0.5 - Math.random();
+        }),
+        clickedImages: [],
         score: 0
-
-      })
+      });
 
     } else {
-      imageOrder.forEach((image, index) => {
-        if (id === image.id) {
-          imageOrder[index].clicked = true;
+      setName({
+        images: name.images.sort(function (a, b) {
+          return 0.5 - Math.random();
+
+        }),
+        clickedImages: name.clickedImages.concat(allImages),
+        score: name.score + 1
+      },
+
+
+        () => {
+          if (name.score === 12) {
+            alert(" You win!");
+            setName({
+              fish: name.images.sort(function (a, b) {
+                return 0.5 - Math.random()
+              }),
+              clickedImages: [],
+              score: 0
+            });
+          }
         }
 
-      });
-      const { topScore, score } = name;
-      const newScore = score + 1;
-      const newTopScore = newScore > topScore ? newScore : topScore;
-
-      return setName({
-        image: imageOrder.sort(() => Math.random() - 0.5),
-        message: "Going Good",
-        score: newScore,
-        topScore: newTopScore
-      })
-
+      );
     }
-  };
 
- 
-    return (
-      <div>
-        <Nav></Nav>
-        <Wrapper>
-          <Title>
-            <div className="text-center">
-              <h1 id="message-title">{name.message} </h1>
-            </div>
-            <div className="gameScores text-center">
-              <p>Score {name.score} | Top Score{name.topScore}</p>
-            </div>
+  }
 
-          </Title>
-          {name.images.map(image => (
-            <ImageCard
-              id={image.id}
-              key={image.id}
-              name={image.name}
-              image={image.image}
-              clicked={image.clicked}
-              handleClick={handleClick} />
-          ))}
-        </Wrapper>
+  return (
+    <div>
+      <Nav></Nav>
+      <Wrapper>
+        <Title>
+          <div className="text-center">
+            <h1 id="message-title">{name.message} </h1>
+          </div>
+          <div className="gameScores text-center">
+            <p>Score : {name.score} </p>
+            <p >The goal is to reach 12 points. Once you get to 12 points you win! Oh yeah dont click the same picture twice or you lose! Have fun!!</p>
+          </div>
 
-      </div>
-    );
-  
+        </Title>
+        {}
+        {name.images.map(image => (
+          <ImageCard
+            id={image.id}
+            key={image.id}
+            image={image.image}
+            handleClick={handleClick} />
+        ))}
+      </Wrapper>
+
+    </div>
+  );
+
 }
 
 export default App;
