@@ -13,7 +13,7 @@ function App() {
     clickedImages: [],
     score: 0,
     // topScore: 0,
-    // message: "Click on a  character.."
+    message: ""
   });
 
 
@@ -30,6 +30,7 @@ function App() {
           return 0.5 - Math.random();
         }),
         clickedImages: [],
+        message:"Bummer, that was wrong!",
         score: 0
       });
 
@@ -52,6 +53,7 @@ function App() {
                 return 0.5 - Math.random()
               }),
               clickedImages: [],
+              message:"Super, you guessed correctly!",
               score: 0
             });
           }

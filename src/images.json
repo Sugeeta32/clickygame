@@ -1,62 +1,62 @@
 [
     {
         "id": 1,
-        "image": "https://static.comicvine.com/uploads/scale_medium/13/132327/6507037-28872490_1638064799604695_1250122498385004714_n.jpg",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9_HIBYfAeJ9138Rc2yZswvuBksucdhU_lmcxkaS_6fnctzC2jGw&s",
         "name": "Superman"
     },
     {
         "id": 2,
-        "image": "https://upload.wikimedia.org/wikipedia/en/1/19/Batman_%28circa_2016%29.png",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu20E_oqzJ6CHguDtXW3OlJeiuJF1M4Kb_07bxLNbW2CL03no06A&s",
         "name": "Batman"
     },
     {
         "id": 3,
-        "image": "https://static.comicvine.com/uploads/original/0/2/75583-135098-iron-man.jpg",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyTXWSAb4t3d0U7DlUrBbqVE_Q240pFkOLckAEub_SpmDKPXxp&s",
         "name": "Ironman"
     },
     {
         "id": 4,
-        "image": "https://static.comicvine.com/uploads/original/6/66303/1839624-aqm_cv1.jpeg",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHe12_IPd5nqjepVaI7Rpn8uLKrrfSa1XkmFy6jlejR96IYfp0&s",
         "name": "Aquaman"
     },
     {
         "id": 5,
-        "image": "https://static.comicvine.com/uploads/scale_small/10/103530/6444044-4130984370-aHR0cDovL3d3dy5uZXdzYXJhbWEuY29tL2ltYWdlcy9pLzAwMC8yMjcvMjY2L29yaWdpbmFsL0pMXzFfdmFyX01hcmtfQnJvb2tzX2IuanBn",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt0EwdTHl_wV2kSofekGfbcIWBa1amtof0-qSTjqjKsECtrc8PLQ&s",
         "name": "WonderWoman"
     },
     {
         "id": 6,
-        "image": "https://static.comicvine.com/uploads/original/0/77/237968-100696-black-panther.jpg",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa140vD9wS0Pp1XAY_xJv7-eD3bydAG-Fz4FxTDwDS-9jrDyBEWg&s",
         "name": "BlackPanther"
     },
     {
         "id": 7,
-        "image": "https://static.comicvine.com/uploads/scale_small/8/83882/2026841-spidey_by_mike_d.jpg",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqYiiqqseBeLD16TfwxNKlJ-YV4F5kLCv1SINUx92Hm2DCzTOD&s",
         "name": "Spiderman"
     },
     {
         "id": 8,
-        "image": "https://static.comicvine.com/uploads/original/6/64109/1286189-black_widow.jpg",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCRMVTkIybaADlxpM0MSGRrT04A9mkF5Y7CluOSpY30wPuy69D&s",
         "name": "BlackWidow"
     },
     {
         "id": 9,
-        "image": "https://static.comicvine.com/uploads/original/3/33913/1315488-47_incredible_hulk_615.jpg",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsWmH7NB6PLs7P87MiKAzJUcjtQnPISETDzRB060jfnB0hZV0i&s",
         "name": "Hulk"
     },
     {
         "id": 10,
-        "image": "https://static.comicvine.com/uploads/original/8/83882/2064466-the_mighty_thor__2_.jpg",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRByw_Swdt8kL-AjDdIdvofRoOES7ybdCG__aOmqPrOxfK-z7_J&s",
         "name": "Thor"
     },
     {
         "id": 11,
-        "image": "https://static.comicvine.com/uploads/original/12/124715/2743795-wolverine_civil_war.png",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYP2GkARg9ghTdt1HTp0PemdPBS5T2o2laJZsSf3bDhZbWIe3i&s",
         "name": "Wolverine"
     },
     {
         "id": 12,
-        "image": "https://static.comicvine.com/uploads/original/10/103729/3456846-5884109795-12611.jpg",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXAbLl_8_ui9v5v7NkP8PZMSQi4fP3VqTyCG1PtWSLa-7xlp-mkw&s",
         "name": "DrStrange"
     }
 ]
